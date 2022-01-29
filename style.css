@@ -1,0 +1,171 @@
+* {
+  font-family:cursive;
+}
+
+p {
+  margin: 0px;
+}
+
+html {
+  height: 99%;
+}
+
+body {
+  height: 100%;
+}
+
+.main {
+  height: 100%;
+} 
+
+/* ================== Header ====================== */
+
+.header {
+  display: flex;
+  height: 100px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eeeeee;
+  transform: translateY(-150%);
+  animation: motion 3s forwards;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+@keyframes motion {
+  0% {transform: translateY(-150%);}
+  100% {transform: translateY(0);}
+}
+
+.right_header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.bell {
+  font-size: 150%;
+  margin-right: 70%;
+  cursor: pointer;
+}
+
+.drop_button {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  border: none;
+  background-color: orange;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.dropdown_content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  margin-top: 100%;
+  width: 200px;
+  cursor: pointer;
+  box-shadow: 0px 5px 15px 10px	#e0e0e0;
+  padding: 20px;
+  background-color: white;
+  font-size: 1.25rem;
+  align-content: center;
+}
+
+.dropdown_content_name {
+  color: #bbbbbb;
+  text-align: left;
+  border-bottom: 2px solid #e0e0e0;
+  font-size: 1rem;
+}
+
+.dropdown_content_menu_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dropdown_content_menu_item a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  text-align: left;  
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 2.5%;
+  color: black;
+}
+
+.dropdown:focus-within .dropdown_content {display: block;}
+
+.dropdown_content a:hover {background-color: #e3e3e4;}
+
+/* ================== Main ====================== */
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.not_found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+/* ================== Toasts ====================== */
+
+.toasts {
+  position: fixed;
+  flex-direction: column;
+  margin-left: 80%;
+  bottom: 0;
+  right: 0;
+}
+
+.toast  {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin: 15px;
+  opacity: 0.9;
+  padding: 15px;
+  color: white;
+  font-size: 1.25rem;
+}
+
+.toast > .icon {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  color: white;
+}
+
+.toast > .content {
+  flex: 20;
+}
+
+.success {
+  background-color: #77b676;
+}
+
+.error {
+  background-color: #cc615a;
+}
